@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerNest | Find Your Next Opportunity</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <!-- Logo -->
+        <a href="#home" class="logo">
+            <img src="./images/navlogo.png" alt="CareerNest" class="logo-image">
+        </a>
+
+
+        <!-- Navigation Links -->
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" class="active">Home</a>
+            <a href="#jobs">Find Jobs</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <!-- Authentication Buttons -->
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn">Log In</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <!-- Small badge -->
+            <div class="hero-badge">
+                <i class="fa-solid fa-sparkles"></i>
+                Your next chapter starts here
+            </div>
+
+            <!-- Main heading -->
+            <h1>
+                Find a job that
+                <span>moves you forward.</span>
+            </h1>
+
+            <!-- Description -->
+            <p>
+                Discover opportunities that match your skills,
+                explore exciting careers, and take the next step
+                toward your professional goals.
+            </p>
+
+            <!-- Job search form -->
+            <form class="search-box" id="jobSearchForm">
+                <div class="search-field">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="jobSearch" placeholder="Job title or keyword">
+                </div>
+
+                <div class="search-field location-field">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" id="jobLocation" placeholder="City or location">
+                </div>
+
+                <button type="submit" class="search-btn">
+                    Search Jobs
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+
+
+            <!-- Popular searches -->
+            <div class="popular-searches">
+                <span>Popular:</span>
+
+                <a href="#jobs" data-search="Frontend Developer">
+                    Frontend Developer
+                </a>
+
+                <a href="#jobs" data-search="UI/UX Designer">
+                    UI/UX Designer
+                </a>
+
+                <a href="#jobs" data-search="Data Analyst">
+                    Data Analyst
+                </a>
+            </div>
+
+        </div>
+        <div class="hero-image">
+            <img src="images/career-hero.jpg" alt="Professional working on a laptop">
+
+            <div class="hero-image-card">
+                <div class="hero-card-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+
+                <div>
+                    <h4>Your next opportunity</h4>
+                    <p>New career possibilities await</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="hero-decoration" aria-hidden="true">
+            <div class="floating-card">
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+                    <strong>New opportunities</strong>
+                    <p>Your next career move awaits.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- EXPLORE BY CATEGORY -->
+    <section class="categories section" id="categories">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">EXPLORE CAREERS</span>
+                <h2>Explore by <span>Category</span></h2>
+                <p>Discover opportunities that match your skills and interests.</p>
+            </div>
+
+            <a href="#jobs" class="text-link">
+                Explore all jobs
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="category-grid">
+
+            <a href="#jobs" class="category-card" data-category="Technology">
+                <div class="category-icon tech-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Technology</h3>
+                <p>Software, IT and development</p>
+                <span class="category-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </a>
+
+            <a href="#jobs" class="category-card" data-category="Design">
+                <div class="category-icon design-icon">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+                <h3>Design & Creative</h3>
+                <p>UI/UX, graphics and creative roles</p>
+                <span class="category-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </a>
+
+            <a href="#jobs" class="category-card" data-category="Marketing">
+                <div class="category-icon marketing-icon">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <h3>Marketing</h3>
+                <p>Digital marketing and communications</p>
+                <span class="category-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </a>
+
+            <a href="#jobs" class="category-card" data-category="Finance">
+                <div class="category-icon finance-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3>Finance</h3>
+                <p>Accounting, banking and analytics</p>
+                <span class="category-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- FEATURED JOBS SECTION -->
+    <section class="featured-jobs section" id="jobs">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">CAREER OPPORTUNITIES</span>
+                <h2>Featured <span>Jobs</span></h2>
+                <p>Explore exciting opportunities from companies looking for talent like you.</p>
+            </div>
+
+            <a href="#all-jobs" class="text-link">
+                View all jobs
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+        <p id="searchMessage" class="search-message" aria-live="polite"></p>
+        <div class="jobs-grid">
+
+            <!-- JOB 1 -->
+            <article class="job-card">
+                <div class="job-card-top">
+                    <div class="company-logo company-blue">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <button class="save-job-btn" aria-label="Save Frontend Developer job">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                </div>
+
+                <span class="job-type full-time">Full-time</span>
+                <h3>Frontend Developer</h3>
+                <p class="company-name">TechNova Solutions</p>
+
+                <div class="job-details">
+                    <span><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</span>
+                    <span><i class="fa-solid fa-briefcase"></i> 1–3 years</span>
+                </div>
+
+                <div class="job-card-bottom">
+                    <div class="job-salary">
+                        <strong>₦250k–₦400k</strong>
+                        <span>/ month</span>
+                    </div>
+                    <a href="job-details.html" class="apply-btn">Apply</a>
+                </div>
+            </article>
+
+            <!-- JOB 2 -->
+            <article class="job-card">
+                <div class="job-card-top">
+                    <div class="company-logo company-purple">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+
+                    <button class="save-job-btn" aria-label="Save UI/UX Designer job">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                </div>
+
+                <span class="job-type remote">Remote</span>
+                <h3>UI/UX Designer</h3>
+                <p class="company-name">PixelCraft Studio</p>
+
+                <div class="job-details">
+                    <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+                    <span><i class="fa-solid fa-briefcase"></i> 2+ years</span>
+                </div>
+
+                <div class="job-card-bottom">
+                    <div class="job-salary">
+                        <strong>₦200k–₦350k</strong>
+                        <span>/ month</span>
+                    </div>
+                    <a href="job-details.html" class="apply-btn">Apply</a>
+                </div>
+            </article>
+
+            <!-- JOB 3 -->
+            <article class="job-card">
+                <div class="job-card-top">
+                    <div class="company-logo company-orange">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+
+                    <button class="save-job-btn" aria-label="Save Digital Marketer job">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                </div>
+
+                <span class="job-type full-time">Full-time</span>
+                <h3>Digital Marketer</h3>
+                <p class="company-name">BrightPath Media</p>
+
+                <div class="job-details">
+                    <span><i class="fa-solid fa-location-dot"></i> Abuja, Nigeria</span>
+                    <span><i class="fa-solid fa-briefcase"></i> 1–2 years</span>
+                </div>
+
+                <div class="job-card-bottom">
+                    <div class="job-salary">
+                        <strong>₦180k–₦280k</strong>
+                        <span>/ month</span>
+                    </div>
+                    <a href="job-details.html" class="apply-btn">Apply</a>
+                </div>
+            </article>
+
+            <!-- JOB 4 -->
+            <article class="job-card">
+                <div class="job-card-top">
+                    <div class="company-logo company-green">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <button class="save-job-btn" aria-label="Save Data Analyst job">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                </div>
+
+                <span class="job-type hybrid">Hybrid</span>
+                <h3>Junior Data Analyst</h3>
+                <p class="company-name">InsightWorks Ltd.</p>
+
+                <div class="job-details">
+                    <span><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</span>
+                    <span><i class="fa-solid fa-briefcase"></i> Entry-level</span>
+                </div>
+
+                <div class="job-card-bottom">
+                    <div class="job-salary">
+                        <strong>₦200k–₦300k</strong>
+                        <span>/ month</span>
+                    </div>
+                    <a href="job-details.html" class="apply-btn">Apply</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE CAREERNEST -->
+    <section class="why-choose section" id="about">
+        <div class="why-container">
+
+            <!-- LEFT VISUAL -->
+            <div class="why-visual">
+                <div class="why-visual-main">
+                    <div class="visual-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <span class="visual-label">YOUR CAREER JOURNEY</span>
+
+                    <h3>Find work that moves you forward.</h3>
+
+                    <p>
+                        Discover opportunities that match your skills,
+                        goals and ambitions.
+                    </p>
+
+                    <div class="visual-progress">
+                        <div class="progress-heading">
+                            <span>Career growth</span>
+                            <strong>Keep growing</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-floating-card">
+                    <div class="floating-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>A smarter job search</strong>
+                        <p>Opportunities in one place</p>
+                    </div>
+                </div>
+
+                <div class="why-decoration"></div>
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="why-content">
+                <span class="eyebrow">WHY CAREERNEST?</span>
+
+                <h2>Your next opportunity
+                    starts <span>right here.</span>
+                </h2>
+
+                <p class="why-description">
+                    Finding a job shouldn't feel overwhelming.
+                    CareerNest helps you discover opportunities,
+                    explore different career paths and take the next
+                    step towards your professional goals.
+                </p>
+
+                <div class="benefits-list">
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon benefit-blue">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+                        <div>
+                            <h3>Easy Job Discovery</h3>
+                            <p>Explore opportunities across different
+                                industries in one convenient place.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon benefit-purple">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+
+                        <div>
+                            <h3>Opportunities That Fit</h3>
+                            <p>Find roles that align with your interests,
+                                experience and career direction.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon benefit-green">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <h3>Save Time</h3>
+                            <p>Browse job details and compare opportunities
+                                without unnecessary hassle.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon benefit-orange">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+
+                        <div>
+                            <h3>Grow Your Career</h3>
+                            <p>Take practical steps towards your next
+                                professional milestone.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="#jobs" class="why-cta">
+                    Explore opportunities
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials section" id="testimonials">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">SUCCESS STORIES</span>
+                <h2>What Job Seekers <span>Say</span></h2>
+                <p>See how CareerNest helps people navigate their career journeys.</p>
+            </div>
+        </div>
+
+        <div class="testimonial-grid">
+
+            <!-- TESTIMONIAL 1 -->
+            <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="testimonial-quote">
+                    "The platform made exploring job opportunities feel
+                    much simpler. I could browse different roles and
+                    find positions that matched my interests."
+                </p>
+
+                <div class="testimonial-profile">
+                    <div class="profile-avatar avatar-blue">AO</div>
+                    <div>
+                        <h3>Amara Okafor</h3>
+                        <span>Graduate Job Seeker</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- TESTIMONIAL 2 -->
+            <article class="testimonial-card featured-testimonial">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="testimonial-quote">
+                    "I liked how easy it was to explore opportunities
+                    across different fields. CareerNest offers a
+                    straightforward way to organise a job search."
+                </p>
+
+                <div class="testimonial-profile">
+                    <div class="profile-avatar avatar-purple">TO</div>
+                    <div>
+                        <h3>Tunde Oladipo</h3>
+                        <span>UI/UX Designer</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- TESTIMONIAL 3 -->
+            <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="testimonial-quote">
+                    "Having job details and opportunities presented
+                    clearly made comparing different roles much easier.
+                    The experience felt simple and organised."
+                </p>
+
+                <div class="testimonial-profile">
+                    <div class="profile-avatar avatar-green">CN</div>
+                    <div>
+                        <h3>Chidera Nwosu</h3>
+                        <span>Early-Career Professional</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- <p class="testimonial-note">
+            <i class="fa-solid fa-circle-info"></i>
+            These are sample testimonials for the website design.
+        </p> -->
+    </section>
+
+    <!-- CAREER CTA SECTION -->
+    <section class="career-cta">
+        <div class="cta-decoration cta-circle-one"></div>
+        <div class="cta-decoration cta-circle-two"></div>
+
+        <div class="cta-content">
+            <span class="cta-badge">
+                <i class="fa-solid fa-rocket"></i>
+                YOUR FUTURE STARTS HERE
+            </span>
+
+            <h2>Ready for Your Next <span>Career Move?</span></h2>
+
+            <p>
+                Discover exciting opportunities, explore new career paths
+                and take the next step towards your professional goals.
+            </p>
+
+            <div class="cta-actions">
+                <a href="signup.html" class="cta-primary">
+                    Get Started Today
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#jobs" class="cta-secondary">
+                    Explore Jobs
+                </a>
+            </div>
+
+            <div class="cta-note">
+                <i class="fa-solid fa-circle-check"></i>
+                Start exploring opportunities at your own pace
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="footer-main">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">
+                    <img src="./images/footerlogo.png" alt="CareerNest" class="footer-logo-image">
+                </a>
+
+                <p>
+                    Helping you discover opportunities, explore career paths
+                    and take confident steps towards your professional future.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#categories">Job Categories</a>
+                <a href="#jobs">Featured Jobs</a>
+            </div>
+
+            <!-- JOB SEEKERS -->
+            <div class="footer-column">
+                <h3>For Job Seekers</h3>
+                <a href="#jobs">Browse Jobs</a>
+                <a href="signup.html">Create Account</a>
+                <a href="login.html">Log In</a>
+                <a href="#testimonials">Success Stories</a>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-column footer-contact">
+                <h3>Get in Touch</h3>
+
+                <p>
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:hello@careernest.example">
+                        hello@careernest.example
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Connecting job seekers with opportunities
+                </p>
+
+                <a href="#contact" class="footer-contact-link">
+                    Contact Us
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="currentYear">2026</span> CareerNest.
+                All rights reserved.
+            </p>
+
+            <div class="footer-legal">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="./js/script.js"></script>
+</html>

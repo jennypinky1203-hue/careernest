@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | CareerNest</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="js/auth.js" defer></script>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-home">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Home
+    </a>
+
+    <main class="auth-page">
+
+        <div class="auth-card" id="authCard">
+
+            <!-- LOGIN FORM -->
+            <section class="form-container login-container">
+                <form id="loginForm" class="auth-form">
+
+                    <a href="index.html" class="brand">
+                        Career<span>Nest</span>
+                    </a>
+
+                    <h1>Welcome Back!</h1>
+                    <p class="subtitle">
+                        Log in to continue your career journey.
+                    </p>
+
+                    <label for="loginEmail">Email Address</label>
+                    <div class="input-group">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="loginEmail" placeholder="Enter your email" autocomplete="email"
+                            required>
+                    </div>
+
+                    <label for="loginPassword">Password</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="loginPassword" placeholder="Enter your password"
+                            autocomplete="current-password" required>
+                        <button type="button" class="password-toggle" aria-label="Show password">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-option">
+                            <input type="checkbox" id="rememberMe">
+                            Remember me
+                        </label>
+
+                        <a href="#" id="forgotPassword">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Log In
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <p class="form-message" id="loginMessage" aria-live="polite"></p>
+
+                    <p class="mobile-switch">
+                        Don't have an account?
+                        <button type="button" data-show="signup">
+                            Sign Up
+                        </button>
+                    </p>
+
+                </form>
+            </section>
+
+
+            <!-- SIGN-UP FORM -->
+            <section class="form-container signup-container">
+                <form id="signupForm" class="auth-form">
+
+                    <a href="index.html" class="brand">
+                        Career<span>Nest</span>
+                    </a>
+
+                    <h1>Create Account</h1>
+                    <p class="subtitle">
+                        Take the next step in your career.
+                    </p>
+
+                    <label for="signupName">Full Name</label>
+                    <div class="input-group">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="signupName" placeholder="Enter your full name" autocomplete="name"
+                            required>
+                    </div>
+
+                    <label for="signupEmail">Email Address</label>
+                    <div class="input-group">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="signupEmail" placeholder="Enter your email" autocomplete="email"
+                            required>
+                    </div>
+
+                    <label for="signupPassword">Password</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="signupPassword" placeholder="Create a password"
+                            autocomplete="new-password" minlength="8" required>
+                        <button type="button" class="password-toggle" aria-label="Show password">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <p class="password-hint">
+                        Use at least 8 characters.
+                    </p>
+
+                    <button type="submit" class="submit-btn">
+                        Create Account
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <p class="form-message" id="signupMessage" aria-live="polite"></p>
+
+                    <p class="mobile-switch">
+                        Already have an account?
+                        <button type="button" data-show="login">
+                            Log In
+                        </button>
+                    </p>
+
+                </form>
+            </section>
+
+
+            <!-- SLIDING IMAGE AREA -->
+            <div class="overlay-container" id="overlayContainer">
+
+                <div class="overlay-track">
+
+                    <!-- WELCOME PANEL -->
+                    <section class="overlay-panel overlay-welcome">
+                        <div class="overlay-content">
+                            <span class="eyebrow">CAREERNEST</span>
+
+                            <h2>Better Careers,<br>Brighter Futures.</h2>
+
+                            <span class="decorative-line"></span>
+
+                            <p>
+                                Discover opportunities that move your
+                                career forward.
+                            </p>
+
+                            <button type="button" class="overlay-btn" data-show="signup">
+                                Create Account
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- RETURNING USER PANEL -->
+                    <section class="overlay-panel overlay-return">
+                        <div class="overlay-content">
+                            <span class="eyebrow">YOUR NEXT CHAPTER</span>
+
+                            <h2>Your Next<br>Opportunity Awaits.</h2>
+
+                            <span class="decorative-line"></span>
+
+                            <p>
+                                Welcome back. Let's continue building
+                                your future.
+                            </p>
+
+                            <button type="button" class="overlay-btn" data-show="login">
+                                Log In
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
